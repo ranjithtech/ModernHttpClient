@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <version>3.4.3</version>
+    <version>3.4.4</version>
     <authors>Alex Rainman</authors>
     <owners>Alex Rainman</owners>
     <license type="expression">MIT</license>
@@ -14,6 +14,8 @@
     <copyright>Copyright Alex Rainman © 2019</copyright>
     <iconUrl>https://github.com/alexrainman/ModernHttpClient/blob/master/download.png</iconUrl>
     <releaseNotes>
+3.4.4
+Fixed NPR for Droid Service calls
 3.4.3
 [Android] Updating to OkHttp3 3.12.6
 [Android] Didn't find class "android.security.NetworkSecurityPolicy" on path: DexPathList bug #57
@@ -103,10 +105,7 @@ Adding Timeout property
       <group targetFramework="Xamarin.iOS10">
         <dependency id="Portable.BouncyCastle" version="1.8.5" />
       </group>
-      <group targetFramework="UAP10">
-        <dependency id="Microsoft.NETCore.UniversalWindowsPlatform" version="6.2.8" />
-        <dependency id="Portable.BouncyCastle-Signed" version="1.7.0.2" />
-      </group>
+      <group targetFramework=".NETStandard2.0" />
     </dependencies>
   </metadata>
 
@@ -119,13 +118,5 @@ Adding Timeout property
 
     <!-- Xamarin.Android -->
     <file src="lib/Android/ModernHttpClient.dll" target="lib/MonoAndroid/ModernHttpClient.dll" />
-
-    <!-- UWP -->
-    <file src="lib/UWP/ModernHttpClient.dll" target="lib/UAP10/ModernHttpClient.dll" />
-    <file src="lib/UWP/ModernHttpClient.pri" target="lib/UAP10/ModernHttpClient.pri" />
-
-    <!-- PCL -->
-    <file src="lib/Portable/ModernHttpClient.dll" target="lib/portable-net45+win8+wpa81/ModernHttpClient.dll" />
-
   </files>
 </package>
